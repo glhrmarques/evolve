@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evolve - Academia</title>
+  <title>Unidades - Evolve Academia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -22,41 +22,20 @@
 
     /* Header */
     .header {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 100;
       padding: 0 100px;
-    }
-
-    .top-banner {
-      background: rgba(255, 255, 255, 0.09);
-      backdrop-filter: blur(7px);
-      border-radius: 0 0 16px 16px;
-      padding: 12px 30px;
-      display: inline-block;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 0;
-    }
-
-    .top-banner p {
-      color: white;
-      font-size: 12px;
-    }
-
-    .top-banner span {
-      font-weight: 700;
-      text-decoration: underline;
+      background: white;
     }
 
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 85px 0 0;
+      padding: 30px 0;
     }
 
     .logo {
@@ -70,7 +49,7 @@
       font-family: 'Syne', sans-serif;
       font-weight: 800;
       font-size: 24px;
-      color: white;
+      color: black;
     }
 
     .logo-icon {
@@ -87,9 +66,14 @@
     }
 
     .nav-links a {
-      color: white;
+      color: black;
       text-decoration: none;
       font-size: 12px;
+    }
+
+    .nav-links a.active {
+      color: #e1251b;
+      font-weight: 700;
     }
 
     .hamburger {
@@ -107,201 +91,74 @@
     .hamburger span {
       width: 28px;
       height: 2px;
-      background: white;
+      background: black;
     }
 
-    /* Hero Section */
-    .hero {
-      background: #2d2b2d;
-      min-height: 815px;
-      border-radius: 0 0 60px 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background: url('https://www.figma.com/api/mcp/asset/d1acaafb-614c-4660-b9ec-2547a61e62b9') center/cover;
-    }
-
-    .hero-bg::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(185deg, rgba(0,0,0,0) 9%, rgba(244,49,32,0.2) 88%), 
-                  linear-gradient(90deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 10;
-      padding: 546px 167px 0;
-    }
-
-    .hero-subtitle {
-      font-family: 'Syne', sans-serif;
-      font-size: 33px;
-      color: white;
-      line-height: 1.2;
-    }
-
-    .hero-title {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 48px;
-      color: white;
-      line-height: 1.3;
-    }
-
-    .hero-dash {
-      font-family: 'Syne', sans-serif;
-      font-weight: 600;
-      font-size: 48px;
-      color: white;
-    }
-
-    .hero-card {
-      position: absolute;
-      right: 140px;
-      top: 264px;
-      z-index: 20;
-    }
-
-    .hero-card-bg {
-      width: 349px;
-      height: 306px;
+    /* Hero Banner */
+    .hero-banner {
       background: #e1251b;
-      clip-path: polygon(15% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%);
+      padding: 140px 44px 40px;
     }
 
-    .hero-card-text {
-      position: absolute;
-      top: 40px;
-      left: -180px;
-      width: 160px;
-      color: white;
-      font-size: 14px;
-      line-height: 1.4;
-    }
-
-    .hero-card-btn {
-      position: absolute;
-      bottom: -60px;
-      left: -180px;
-      color: white;
-      font-weight: 700;
-      font-size: 18px;
-      text-transform: lowercase;
-      border-bottom: 2px solid white;
-      padding-bottom: 5px;
-    }
-
-    .hero-bottom {
-      position: absolute;
-      bottom: 60px;
-      right: 100px;
-      display: flex;
-      align-items: center;
-      gap: 60px;
-      z-index: 10;
-    }
-
-    .hero-location {
-      color: #999;
-      font-size: 14px;
-    }
-
-    .hero-location strong {
-      color: white;
-      font-weight: 700;
-    }
-
-    .hero-cta {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      color: white;
-      font-size: 14px;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    .hero-cta::after {
-      content: '';
-      width: 80px;
-      height: 1px;
-      background: #999;
-      margin-left: 5px;
-    }
-
-    .hero-cta-dot {
-      width: 6px;
-      height: 6px;
-      background: white;
-      border-radius: 50%;
-    }
-
-    /* Unidades Section */
-    .section-title-bar {
-      background: #f2f2f2;
-      padding: 75px 44px;
-    }
-
-    .section-title-bar h2 {
+    .hero-banner h1 {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
       font-size: 24px;
-      color: #2d2b2d;
+      color: white;
+      text-transform: uppercase;
     }
 
-    /* Location Cards */
-    .locations-section {
-      background: #f2f2f2;
+    /* Nearby Section - Red Background */
+    .nearby-section {
+      background: #e1251b;
       padding: 0 44px 100px;
+      border-radius: 0 0 60px 0;
     }
 
-    .locations-grid {
+    .nearby-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
 
-    .location-card {
+    .nearby-card {
       height: 495px;
       position: relative;
       overflow: hidden;
     }
 
-    .location-card img {
+    .nearby-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .location-card::after {
+    .nearby-card::after {
       content: '';
       position: absolute;
       inset: 0;
       background: rgba(0, 0, 0, 0.3);
     }
 
-    .location-card-content {
+    .nearby-card-content {
       position: absolute;
       bottom: 30px;
       left: 25px;
       z-index: 10;
     }
 
-    .location-card-content h3 {
+    .nearby-card-content h3 {
       font-weight: 600;
       font-size: 32px;
       color: white;
       line-height: 1.2;
+    }
+
+    .nearby-card:first-child .nearby-card-content h3 {
       text-decoration: underline;
     }
 
-    .location-card-arrow {
+    .nearby-card-arrow {
       position: absolute;
       bottom: 30px;
       left: 195px;
@@ -310,248 +167,111 @@
       height: 30px;
     }
 
-    .location-card-arrow svg {
-      fill: #e1251b;
+    /* Region Section Header */
+    .region-header {
+      padding: 50px 44px;
     }
 
-    /* About Section */
-    .about-section {
-      display: flex;
-      min-height: 606px;
-      position: relative;
-    }
-
-    .about-image {
-      width: 610px;
-      height: 606px;
-      border-radius: 0 0 0 60px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .about-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .about-image::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    .about-text-overlay {
-      position: absolute;
-      bottom: 80px;
-      left: 104px;
-      z-index: 10;
-    }
-
-    .about-text-overlay h2 {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 48px;
-      color: white;
-      line-height: 1.3;
-      max-width: 484px;
-    }
-
-    .about-content {
-      flex: 1;
-      padding: 100px 80px;
-      position: relative;
-    }
-
-    .about-description {
-      max-width: 275px;
-      font-size: 16px;
-      line-height: 1.5;
-      color: black;
-      margin-bottom: 40px;
-    }
-
-    .about-logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 60px;
-    }
-
-    .about-logo-text {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 30px;
-      color: black;
-    }
-
-    .about-logo-icon {
-      width: 42px;
-      height: 37px;
-      background: #e1251b;
-      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-    }
-
-    .about-photos {
-      position: absolute;
-      right: 80px;
-      top: 50px;
-      display: flex;
-      gap: 20px;
-    }
-
-    .about-photo {
-      border-radius: 4px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-
-    .about-photo:nth-child(1) {
-      width: 184px;
-      height: 211px;
-      transform: rotate(-10deg);
-    }
-
-    .about-photo:nth-child(2) {
-      width: 259px;
-      height: 297px;
-    }
-
-    .about-photo:nth-child(3) {
-      width: 259px;
-      height: 297px;
-      transform: rotate(17deg);
-      margin-top: 50px;
-    }
-
-    .about-photo:nth-child(4) {
-      width: 196px;
-      height: 225px;
-      transform: rotate(30deg);
-      margin-top: 100px;
-    }
-
-    .about-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* DF Locations Section */
-    .df-section-header {
+    .region-header.gray {
       background: #f2f2f2;
-      padding: 40px 44px;
     }
 
-    .df-section-header-content {
+    .region-header.white {
+      background: white;
+    }
+
+    .region-title {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      align-items: baseline;
+      gap: 15px;
     }
 
-    .df-title {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .df-title h3 {
+    .region-title h2 {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
       font-size: 24px;
     }
 
-    .df-title .underline {
-      height: 2px;
-      width: 312px;
-      background: #2d2b2d;
-      margin-top: 10px;
-    }
-
-    .df-view-all {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-
-    .df-view-all::after {
-      content: '';
-      width: 80px;
-      height: 1px;
-      background: #999;
-    }
-
-    .df-view-all-dot {
-      width: 6px;
-      height: 6px;
-      background: black;
-      border-radius: 50%;
-    }
-
-    /* DF Cards */
-    .df-cards-section {
-      background: #f2f2f2;
-      padding: 22px 44px 100px;
+    /* Region Cards Section */
+    .region-section {
+      padding: 0 44px 100px;
       border-radius: 0 0 60px 0;
     }
 
-    .df-cards-grid {
+    .region-section.gray {
+      background: #f2f2f2;
+    }
+
+    .region-section.white {
+      background: white;
+    }
+
+    .region-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
 
-    .df-card {
+    .region-card {
       height: 540px;
       position: relative;
       overflow: hidden;
     }
 
-    .df-card img {
+    .region-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .df-card::after {
+    .region-card::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.3);
     }
 
-    .df-card:first-child::after {
+    .region-card:first-child::after {
       background: linear-gradient(90deg, rgba(225,37,27,0.7) 0%, rgba(225,37,27,0.7) 100%), 
                   linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%);
     }
 
-    .df-card-content {
+    .region-card-content {
       position: absolute;
       bottom: 25px;
       left: 25px;
       z-index: 10;
     }
 
-    .df-card-content h3 {
+    .region-card-content h3 {
       font-weight: 600;
       font-size: 32px;
       color: white;
       line-height: 1.2;
     }
 
-    .df-card:first-child .df-card-content h3 {
+    .region-card:first-child .region-card-content h3 {
       text-decoration: underline;
     }
 
-    .df-logo {
+    .region-card-arrow {
+      position: absolute;
+      bottom: 25px;
+      left: 195px;
+      z-index: 10;
+      width: 44px;
+      height: 30px;
+    }
+
+    .region-logo {
       position: absolute;
       right: 44px;
-      bottom: 200px;
-      z-index: 10;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 174px;
+      height: 174px;
+      z-index: 5;
+      opacity: 0.15;
     }
 
     /* Classes Section */
@@ -680,7 +400,7 @@
     /* Footer */
     .footer {
       background: white;
-      padding: 80px 165px;
+      padding: 80px 100px;
     }
 
     .footer-content {
@@ -980,16 +700,13 @@
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="top-banner">
-      <p>Comece agora! <span>Escolha uma unidade e faça sua matrícula</span></p>
-    </div>
     <nav class="nav">
       <a href="index.html" class="logo">
         <span class="logo-text">EVOLVE</span>
         <div class="logo-icon"></div>
       </a>
       <div class="nav-links">
-        <a href="unidades.html">unidades</a>
+        <a href="unidades.html" class="active">unidades</a>
         <a href="aulas.html">aulas</a>
         <div class="hamburger">
           <span></span>
@@ -1000,129 +717,142 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <p class="hero-subtitle">NOVA UNIDADE</p>
-      <h1 class="hero-title">PONTE ALTA</h1>
-      <p class="hero-dash">—EVOLVE</p>
-    </div>
-    <div class="hero-card">
-      <p class="hero-card-text">Cadastre na pré-lista de convidados e ganhe até 50% de desconto no plano anual</p>
-      <div class="hero-card-bg"></div>
-      <span class="hero-card-btn">Cadastrar</span>
-    </div>
-    <div class="hero-bottom">
-      <p class="hero-location">SH Ponte de Terra - Pte. Alta Norte <strong>Gama</strong></p>
-      <div class="hero-cta">
-        <span>saiba mais</span>
-        <span class="hero-cta-dot"></span>
-      </div>
-    </div>
+  <!-- Hero Banner -->
+  <section class="hero-banner">
+    <h1>UNIDADES PERTO DE VOCÊ</h1>
   </section>
 
-  <!-- Unidades Section -->
-  <div class="section-title-bar">
-    <h2>UNIDADES PERTO DE VOCÊ</h2>
-  </div>
-
-  <section class="locations-section">
-    <div class="locations-grid">
-      <div class="location-card">
-        <img src="https://www.figma.com/api/mcp/asset/5c37e9a3-1ad3-45a3-8561-37858cd4adeb" alt="Águas Claras Shopping">
-        <div class="location-card-content">
+  <!-- Nearby Section (Red Background) -->
+  <section class="nearby-section">
+    <div class="nearby-grid">
+      <div class="nearby-card">
+        <img src="https://www.figma.com/api/mcp/asset/d5ee4942-6aa6-4df8-a3a9-d1a563c2964a" alt="Águas Claras Shopping">
+        <div class="nearby-card-content">
           <h3>Águas Claras<br>Shopping</h3>
         </div>
-        <div class="location-card-arrow">
+        <div class="nearby-card-arrow">
           <svg viewBox="0 0 44 30" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 15L40 15M40 15L28 3M40 15L28 27" stroke="#e1251b" stroke-width="3" fill="none"/>
+            <path d="M0 15L40 15M40 15L28 3M40 15L28 27" stroke="white" stroke-width="3" fill="none"/>
           </svg>
         </div>
       </div>
-      <div class="location-card">
-        <img src="https://www.figma.com/api/mcp/asset/ca0bad14-7dfe-48d7-ae9f-2e4d00f51a3a" alt="Rua 27 norte">
-        <div class="location-card-content">
+      <div class="nearby-card">
+        <img src="https://www.figma.com/api/mcp/asset/c3d368db-a96b-44ff-a2fd-6b509844f9f2" alt="Rua 27 norte">
+        <div class="nearby-card-content">
           <h3>Rua 27<br>norte</h3>
         </div>
       </div>
-      <div class="location-card">
-        <img src="https://www.figma.com/api/mcp/asset/a48f5eb1-e791-43be-aae3-b1b2841250c3" alt="Alameda Shopping">
-        <div class="location-card-content">
+      <div class="nearby-card">
+        <img src="https://www.figma.com/api/mcp/asset/62803219-a6c6-4960-ad41-c433a4215c40" alt="Alameda Shopping">
+        <div class="nearby-card-content">
           <h3>Alameda<br>Shopping</h3>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="about-image">
-      <img src="https://www.figma.com/api/mcp/asset/b11be324-c687-4953-9054-faac9f054814" alt="Evolve">
-      <div class="about-text-overlay">
-        <h2>Igual a você, diferente.</h2>
-      </div>
+  <!-- Distrito Federal Section -->
+  <div class="region-header gray">
+    <div class="region-title">
+      <h2>Unidades</h2>
+      <h2>Distrito Federal</h2>
     </div>
-    <div class="about-content">
-      <p class="about-description">
-        Diversidade não é algo a ser aceito, mas sim compartilhado. Nós somos a própria diversidade. Somos diversos nos objetivos, motivações, decisões e aparência. Não há outro como você, e esse é seu principal valor. Faça parte da família Evolve. Aqui, especial é ser você!
-      </p>
-      <div class="about-logo">
-        <span class="about-logo-text">EVOLVE</span>
-        <div class="about-logo-icon"></div>
+  </div>
+
+  <section class="region-section gray">
+    <div class="region-grid">
+      <div class="region-card">
+        <img src="https://www.figma.com/api/mcp/asset/8995cccf-6052-45bf-894f-cbfb5e5bcb76" alt="Asa norte 409">
+        <div class="region-card-content">
+          <h3>Asa norte<br>409</h3>
+        </div>
+        <div class="region-card-arrow">
+          <svg viewBox="0 0 44 30" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 15L40 15M40 15L28 3M40 15L28 27" stroke="white" stroke-width="3" fill="none"/>
+          </svg>
+        </div>
       </div>
-      <div class="about-photos">
-        <div class="about-photo">
-          <img src="https://www.figma.com/api/mcp/asset/5bf9b225-a0ea-4fa6-ab08-19a75172b1ae" alt="Photo 1">
+      <div class="region-card">
+        <img src="https://www.figma.com/api/mcp/asset/e6247275-da56-4fe5-aa43-0bc58fee19c1" alt="Asa sul">
+        <div class="region-card-content">
+          <h3>Asa sul</h3>
         </div>
-        <div class="about-photo">
-          <img src="https://www.figma.com/api/mcp/asset/61c4fdf1-621a-40f7-b84e-3014317ccb9d" alt="Photo 2">
-        </div>
-        <div class="about-photo">
-          <img src="https://www.figma.com/api/mcp/asset/45a8211f-9de9-4e28-b7c2-e97a93c46a2b" alt="Photo 3">
-        </div>
-        <div class="about-photo">
-          <img src="https://www.figma.com/api/mcp/asset/0490bcff-faaf-4b5b-ad79-b130cb6dab32" alt="Photo 4">
+      </div>
+      <div class="region-card">
+        <img src="https://www.figma.com/api/mcp/asset/2f048d8c-c573-4623-abd8-1f28acfcdf7b" alt="Sudoeste">
+        <div class="region-card-content">
+          <h3>Sudoeste</h3>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- DF Locations Header -->
-  <div class="df-section-header">
-    <div class="df-section-header-content">
-      <div class="df-title">
-        <h3>Unidades</h3>
-        <div>
-          <h3>Distrito Federal</h3>
-          <div class="underline"></div>
-        </div>
-      </div>
-      <div class="df-view-all">
-        <span>Ver todas as unidades</span>
-        <span class="df-view-all-dot"></span>
-      </div>
+  <!-- Goiás Section -->
+  <div class="region-header white">
+    <div class="region-title">
+      <h2>Unidades</h2>
+      <h2>Goiás</h2>
     </div>
   </div>
 
-  <!-- DF Cards -->
-  <section class="df-cards-section">
-    <div class="df-cards-grid">
-      <div class="df-card">
-        <img src="https://www.figma.com/api/mcp/asset/9f92937c-3526-4fe7-bde4-a9d0eae34db9" alt="Asa norte 409">
-        <div class="df-card-content">
+  <section class="region-section white">
+    <div class="region-grid">
+      <div class="region-card">
+        <img src="https://www.figma.com/api/mcp/asset/557c3726-1edb-456a-905f-4af8e48f7ed5" alt="Asa norte 409">
+        <div class="region-card-content">
           <h3>Asa norte<br>409</h3>
         </div>
+        <div class="region-card-arrow">
+          <svg viewBox="0 0 44 30" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 15L40 15M40 15L28 3M40 15L28 27" stroke="white" stroke-width="3" fill="none"/>
+          </svg>
+        </div>
       </div>
-      <div class="df-card">
-        <img src="https://www.figma.com/api/mcp/asset/8d6a68e7-f296-4c5f-95e7-09c7b96d6ec8" alt="Asa sul">
-        <div class="df-card-content">
+      <div class="region-card">
+        <img src="https://www.figma.com/api/mcp/asset/62803219-a6c6-4960-ad41-c433a4215c40" alt="Asa sul">
+        <div class="region-card-content">
           <h3>Asa sul</h3>
         </div>
       </div>
-      <div class="df-card">
-        <img src="https://www.figma.com/api/mcp/asset/8081c28c-24d5-4500-9826-6004f4b8f418" alt="Sudoeste">
-        <div class="df-card-content">
+      <div class="region-card">
+        <img src="https://www.figma.com/api/mcp/asset/d37382a7-ff0e-4873-9a9f-34f3d56d3ac8" alt="Sudoeste">
+        <div class="region-card-content">
+          <h3>Sudoeste</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bahia Section -->
+  <div class="region-header gray">
+    <div class="region-title">
+      <h2>Unidades</h2>
+      <h2>Bahia</h2>
+    </div>
+  </div>
+
+  <section class="region-section gray">
+    <div class="region-grid">
+      <div class="region-card">
+        <img src="https://www.figma.com/api/mcp/asset/43be65fc-2bb3-490c-a7fb-e021a87610c6" alt="Asa norte 409">
+        <div class="region-card-content">
+          <h3>Asa norte<br>409</h3>
+        </div>
+        <div class="region-card-arrow">
+          <svg viewBox="0 0 44 30" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 15L40 15M40 15L28 3M40 15L28 27" stroke="white" stroke-width="3" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <div class="region-card">
+        <img src="https://www.figma.com/api/mcp/asset/765e87c1-d7b4-46ca-a8fc-3654593892e7" alt="Asa sul">
+        <div class="region-card-content">
+          <h3>Asa sul</h3>
+        </div>
+      </div>
+      <div class="region-card">
+        <img src="https://www.figma.com/api/mcp/asset/5cf461b0-fbca-4494-98b6-42f80f283bf9" alt="Sudoeste">
+        <div class="region-card-content">
           <h3>Sudoeste</h3>
         </div>
       </div>
@@ -1278,7 +1008,6 @@
     menuClose.addEventListener('click', closeMenu);
     menuOverlay.addEventListener('click', closeMenu);
 
-    // Close menu on escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         closeMenu();
